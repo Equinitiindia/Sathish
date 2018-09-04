@@ -1,0 +1,88 @@
+﻿@model sathishtsTest.Models.SampleDataModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SampleDataModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model._Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model._ApplicationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._ApplicationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model._Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model._Summary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Summary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model._Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model._PostingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._PostingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model._IsCleared)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._IsCleared)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model._ClearedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._ClearedDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

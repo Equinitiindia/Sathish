@@ -1,0 +1,76 @@
+﻿@model IEnumerable<sathishtsTest.Models.SampleDataModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model._Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._ApplicationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._Summary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._PostingDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._IsCleared)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._ClearedDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item._Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item._ApplicationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item._Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item._Summary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item._Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item._PostingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item._IsCleared)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item._ClearedDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item._Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item._Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item._Id })
+            </td>
+        </tr>
+    }
+
+</table>
